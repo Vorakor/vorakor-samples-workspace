@@ -3,20 +3,23 @@
   [containerInside]="false"
 >
   <mdb-navbar-brand
-    ><a class="navbar-brand" href="#">VorakorTech</a></mdb-navbar-brand
+    ><a class="navbar-brand" routerLink="">VorakorTech</a></mdb-navbar-brand
   >
   <links>
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link waves-light" mdbWavesEffect>Home</a>
+        <a class="nav-link waves-light" routerLink="" mdbWavesEffect>Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link waves-light" mdbWavesEffect>Ngx-Generic-Wizard</a>
+        <a class="nav-link waves-light" routerLink="ngx-df" mdbWavesEffect>Ngx-Dynamic-Forms</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link waves-light" mdbWavesEffect>Ngx-Health-Checker</a>
+        <a class="nav-link waves-light" routerLink="ngx-gw" mdbWavesEffect>Ngx-Generic-Wizard</a>
       </li>
-      <li class="nav-item dropdown" dropdown>
+      <li class="nav-item">
+        <a class="nav-link waves-light" routerLink="ngx-hc" mdbWavesEffect>Ngx-Health-Checker</a>
+      </li>
+      <!-- <li class="nav-item dropdown" dropdown>
         <a
           dropdownToggle
           mdbWavesEffect
@@ -36,11 +39,11 @@
             >Advanced</a
           >
         </div>
-      </li>
+      </li> -->
     </ul>
 
     <ul class="navbar-nav ml-auto nav-flex-icons">
-      <li class="nav-item mail">
+      <!-- <li class="nav-item mail">
         <a class="nav-link">1 <mdb-icon fas icon="envelope"></mdb-icon></a>
       </li>
       <li class="nav-item avatar dropdown" dropdown>
@@ -52,7 +55,7 @@
           mdbWavesEffect
         >
           <img
-            src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg"
+            src="https://mdbootstrap.com/img/Photos/Avatars/avatar-6.jpg"
             alt=""
             class="img-fluid rounded-circle z-depth-0"
         /></a>
@@ -69,12 +72,11 @@
             >Log out</a
           >
         </div>
-      </li>
+      </li> -->
     </ul>
   </links>
 </mdb-navbar>
-<div class="container-fluid my-2">
-  <div>Content here...</div>
+<div class="container-fluid my-5 main-page">
   <router-outlet></router-outlet>
 </div>
 <footer class="page-footer font-small mdb-color pt-4">
