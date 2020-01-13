@@ -1,4 +1,6 @@
-# VorakorSamplesWorkspace
+# Vorakor Samples Workspace
+
+This project is merely a demo project to show off the features and functionality of three different plugins produced by Vorakor Technologies: Ngx-Generic-Wizard, Ngx-Dynamic-Forms, and Ngx-Health-Checker.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
 
