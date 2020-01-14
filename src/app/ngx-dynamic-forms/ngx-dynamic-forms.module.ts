@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { NgxDynamicFormsModule as ngxDF } from 'ngx-dynamic-forms';
 
 import { BasicHorizontalFormComponent } from './basic-horizontal-form/basic-horizontal-form.component';
 import { BasicVerticalFormComponent } from './basic-vertical-form/basic-vertical-form.component';
@@ -17,6 +18,6 @@ import { NgxDynamicFormsRoutingModule } from './ngx-dynamic-forms-routing.module
         InnerWorkingsComponent,
         FutureFeaturesComponent,
     ],
-    imports: [CommonModule, MDBBootstrapModule, NgxDynamicFormsRoutingModule],
+    imports: [CommonModule, MDBBootstrapModule, NgxDynamicFormsRoutingModule, ngxDF],
 })
 export class NgxDynamicFormsModule {}
