@@ -1,2 +1,83 @@
-<h1 class="green-text text-center">Ngx Dynamic Forms</h1>
-<p>Coming soon!</p>
+<section class="text-center">
+    <h2 class="h1 pb-2 font-weight-bold green-text">Ngx Dynamic Forms</h2>
+    <p class="px-5 mb-5 pb-3 lead grey-text">
+        A form generator for all of your dynamic needs! Simply give it configurations and define
+        your inputs, give it your formGroup variable, and add data and Ngx Dynamic Forms will handle
+        the rest.
+    </p>
+    <p class="px-5 mb-5 pb-3 lead grey-text">
+        Ngx Dynamic Forms currently features horizontal and vertical configured forms, as well as
+        submit and reset functionality, form controls can be passed in with custom validation as
+        well. There are two interfaces to make use of to accomplish configuration and to designate
+        fields and input structure, these are ngx-df-configuration and ngx-df-field-definition.
+    </p>
+    <p class="px-5 mb-5 pb-3 lead grey-text">
+        Ngx Dynamic Forms also has the ability to handle dynamic data, if you are unsure of how many
+        inputs or rows you will need, you won't even need to think about it anymore, and if someone
+        adds a new row without telling you, no worries there either, Ngx Dynamic Forms will adapt
+        and add in new rows dynamically as long as you've done your homework and set it up properly.
+    </p>
+    <div class="row text-left">
+        <div class="col-md-6 mb-3">
+            <div class="col-1 col-md-2 float-left">
+                <mdb-icon fas icon="ruler-horizontal" size="3x" class="red-text"></mdb-icon>
+            </div>
+            <div class="col-10 col-md-9 col-lg-10 float-right">
+                <h4 class="font-weight-bold">Basic Horizontal Form</h4>
+                <p class="grey-text">
+                    The idea with the horizontal form is that all elements are on one line. Typical
+                    use cases for this include search functionality in the header bar.
+                </p>
+                <a mdbBtn color="danger" size="sm" class="ml-0 waves-light" [routerLink]="['basic', 'horizontal']" mdbWavesEffect>
+                    Examples
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <div class="col-1 col-md-2 float-left">
+                <mdb-icon fas icon="ruler-vertical" size="3x" class="cyan-text"></mdb-icon>
+            </div>
+            <div class="col-10 col-md-9 col-lg-10 float-right">
+                <h4 class="font-weight-bold">Basic Vertical Form</h4>
+                <p class="grey-text">
+                    Vertical forms are the most common forms, and basically it means that each input
+                    has it's own line. Typical use cases include sign-in forms.
+                </p>
+                <a mdbBtn color="cyan" size="sm" class="ml-0 waves-light" [routerLink]="['basic', 'vertical']" mdbWavesEffect>
+                    Examples
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="col-1 col-md-2 float-left">
+                <mdb-icon fas icon="cogs" size="3x" class="orange-text"></mdb-icon>
+            </div>
+            <div class="col-10 col-md-9 col-lg-10 float-right">
+                <h4 class="font-weight-bold">Inner Workings</h4>
+                <p class="grey-text">
+                    Come here to see some of the inner workings of Ngx Dynamic Forms, and suggest
+                    improvements.
+                </p>
+                <a mdbBtn color="orange" size="sm" class="ml-0 waves-light" [routerLink]="['inner-workings']" mdbWavesEffect>
+                    Learn More
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="col-1 col-md-2 float-left">
+                <mdb-icon fas icon="road" size="3x" class="blue-text"></mdb-icon>
+            </div>
+            <div class="col-10 col-md-9 col-lg-10 float-right">
+                <h4 class="font-weight-bold">Future Features</h4>
+                <p class="grey-text">
+                    Here we have a road map of future features that are intended to be implemented
+                    into Ngx Dynamic Forms, some features include a grouping and table templates in
+                    addition to the horizontal and vertical template forms.
+                </p>
+                <a mdbBtn color="primary" size="sm" class="ml-0 waves-light" [routerLink]="['future']" mdbWavesEffect>
+                    See More
+                </a>
+            </div>
+        </div>
+    </div>
+</section>;

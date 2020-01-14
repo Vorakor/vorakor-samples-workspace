@@ -1,15 +1,12 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
-import { NgxGenericWizardRoutingModule } from './ngx-generic-wizard-routing.module';
 import { HomeComponent } from './home/home.component';
-
+import { NgxGenericWizardRoutingModule } from './ngx-generic-wizard-routing.module';
 
 @NgModule({
-  declarations: [HomeComponent],
-  imports: [
-    CommonModule,
-    NgxGenericWizardRoutingModule
-  ]
+    declarations: [HomeComponent],
+    imports: [CommonModule, MDBBootstrapModule, NgxGenericWizardRoutingModule],
 })
-export class NgxGenericWizardModule { }
+export class NgxGenericWizardModule {}
