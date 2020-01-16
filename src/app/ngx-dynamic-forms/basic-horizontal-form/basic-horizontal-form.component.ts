@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { NgxDFFieldDefinition, NgxDFConfiguration } from 'ngx-dynamic-forms/lib/interfaces';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { NgxDFConfiguration, NgxDFFieldDefinition } from 'ngx-dynamic-forms/lib/interfaces';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Component({
     selector: 'app-basic-horizontal-form',
@@ -27,6 +27,7 @@ export class BasicHorizontalFormComponent implements OnInit {
             id: 'searchQuery',
             type: 'text',
             label: 'Search',
+            class: '',
         },
     ];
     ex2Opts: { value: any; label: string }[] = [

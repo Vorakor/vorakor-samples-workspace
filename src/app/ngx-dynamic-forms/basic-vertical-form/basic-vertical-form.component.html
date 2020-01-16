@@ -1,3 +1,31 @@
 <section class="text-center">
     <h2 class="h1 pb-2 font-weight-bold green-text">Ngx Dynamic Forms - Basic Vertical Form</h2>
-</section>;
+
+    <div class="row text-left">
+        <div class="col-12 mb-3">
+            <h3 class="h3">Example 1 - Vertical Checkbox Form</h3>
+        </div>
+        <div class="col-12 mb-3 ngx-df-h50">
+            <ngx-dynamic-forms ngProjectAs="form" [fields]="ex1Fields" [formGroup]="ex1FormGroup" [config]="ex1Config" (formSubmit)="ex1Submit($event)" (formReset)="ex1Reset($event)"></ngx-dynamic-forms>
+        </div>
+        <div class="col-12 mb-3">
+            <h4 class="h4">Submit Results</h4>
+        </div>
+        <div class="col-12 mb-3 ngx-df-h50">
+            {{ ex1Results$ | async }}
+        </div>
+
+        <!-- <div class="col-12 mb-3">
+            <h3 class="h3">Example 2 - Select and Post Form</h3>
+        </div>
+        <div class="col-12 mb-3 ngx-df-h50">
+            <ngx-dynamic-forms ngProjectAs="form" [fields]="ex2Fields" [formGroup]="ex2FormGroup" [config]="ex2Config" (formSubmit)="ex2Submit($event)" (formReset)="ex2Reset($event)"></ngx-dynamic-forms>
+        </div>
+        <div class="col-12 mb-3">
+            <h4 class="h4">Submit Results</h4>
+        </div>
+        <div class="col-12 mb-3 ngx-df-h50">
+            {{ ex2Results$ | async }}
+        </div> -->
+    </div>
+</section>
