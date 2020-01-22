@@ -1,1 +1,190 @@
-<p>inner-workings works!</p>
+<section class="text-center">
+    <h2 class="h1 pb-2 font-weight-bold pink-text">Ngx Generic Wizard - Inner Workings</h2>
+    <p class="px-5 mb-5 pb-3 lead">
+        Note: I'm not putting all of the models up here just yet, only the main ones a user will actually need to use
+        right away.
+    </p>
+    <div class="card-deck">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h4 class="card-title">Ngx-gw-config Interface</h4>
+                <p class="card-text">
+                    This interface maps out the necessary parameters and configurable options for
+                    the Ngx Generic Wizard.
+                </p>
+                <p class="card-text text-left">
+                    <code>interface INgxGwConfig &#123;</code>
+                    <br />
+                    <code>
+                        <a
+                            mdbTooltip="The identifier of the configuration for the wizard, one
+                    configuration can have many steps, many history logs, etc."
+                            placement="right"
+                        >configId</a>&#63;&#58; number&#59;
+                    </code>
+                    <br />
+                    <code>
+                        <a
+                            mdbTooltip="The shorthand string identifier for the configuration of the wizard."
+                            placement="right"
+                        >code</a>&#63;&#58; string&#91;&#93;&#59;
+                    </code>
+                    <br />
+                    <code>
+                        <a
+                            mdbTooltip="A long and more descriptive identifier for the wizard or just
+                        generic description of what the wizard does / how it operates."
+                            placement="right"
+                        >description</a>&#63;&#58; string&#59;
+                    </code>
+                    <br />
+                    <code>
+                        <a
+                            mdbTooltip="The base url that the wizard will use when switching between steps
+                        of the process. I.E.: let's say your wizard is for a payment processing
+                        module within an application, now let's say there are three steps to this
+                        process that correspond to three different components within the payments
+                        module, let's say that the payments module has a url of /payments while the
+                        pages are at the corresponding urls of /payments/child1, /payments/child2,
+                        /payments/child3. In this instance, the base URL is 'payments'."
+                            placement="right"
+                        >baseUrl</a>&#63;&#58; string&#59;
+                    </code>
+                    <br />
+                    <code>
+                        <a
+                            mdbTooltip="The url where the wizard is to navigate to upon completion of
+                        the final step of the wizard. This is set so that it can completely navigate
+                        out of the module if it needs to."
+                            placement="right"
+                        >finalizeUrl</a>&#63;&#58; string&#59;
+                    </code>
+                    <br />
+                    <code>
+                        <a
+                            mdbTooltip="Determines how the wizard operates: many users using one
+                        copy of the wizard (false), vs many users each using their own copy of the
+                        wizard (true)."
+                            placement="right"
+                        >ignoreIncomplete</a>&#63;&#58; boolean&#59;
+                    </code>
+                    <br />
+                    <code>
+                        <a
+                            mdbTooltip="Basically specifies that a user cannot simply jump back
+                        to completed steps to adjust information, this option will add a 'previous'
+                        button to the UI."
+                            placement="right"
+                        >completedDisabled</a>&#63;&#58; boolean&#59;
+                    </code>
+                    <br />
+                    <code>
+                        <a
+                            mdbTooltip="Link this to the application that is running the wizard,
+                        this will allow for one application to run multiple wizards and is vital for
+                        how this wizard generator works."
+                            placement="right"
+                        >applicationId</a>&#63;&#58; number&#59;
+                    </code>
+                    <br />
+                    <code>
+                        <a
+                            mdbTooltip="Link this to the module that is running the wizard within the
+                        application, each application can have many modules and each module can have
+                        many wizards, also vital for how this wizard generator works."
+                            placement="right"
+                        >moduleId</a>&#63;&#58; number&#59;
+                    </code>
+                    <br />
+                    <code>&#125;</code>
+                </p>
+            </div>
+        </div>
+        <div class="card mb-4">
+            <div class="card-body">
+                <h4 class="card-title">Ngx-gw-step Interface</h4>
+                <p class="card-text">
+                    This interface maps out the individual steps of the wizard and various
+                    configurations for that.
+                </p>
+                <p class="card-text text-left">
+                    <code>interface INgxGwStep &#123;</code>
+                    <br />
+                    <code>
+                        <a
+                            mdbTooltip="The identifier for this row."
+                            placement="right"
+                        >stepId</a>&#63;&#58; number&#59;</code>
+                    <br />
+                    <code>
+                        <a
+                            mdbTooltip="Which configuration the step belongs to."
+                            placement="right"
+                        >configId</a>&#63;&#58; number&#91;&#93;&#59;</code>
+                    <br />
+                    <code>
+                        <a
+                            mdbTooltip="The current status of the step."
+                            placement="right"
+                        >status</a>&#63;&#58; INgxGwStepStatus&#59;</code>
+                    <br />
+                    <code>
+                        <a
+                            mdbTooltip="The short name of the step."
+                            placement="right"
+                        >code</a>&#63;&#58; string&#59;</code>
+                    <br />
+                    <code>
+                        <a
+                            mdbTooltip="The display name of the step."
+                            placement="right"
+                        >description</a>&#63;&#58; string&#59;</code>
+                    <br />
+                    <code>
+                        <a
+                            mdbTooltip="The order the step needs to appear in, in multiples of 100 so that we can easily assign more steps in between other ones."
+                            placement="right"
+                        >stepOrder</a>&#63;&#58; number&#59;</code>
+                    <br />
+                    <code>
+                        <a
+                            mdbTooltip="The component / page that this step corresponds to."
+                            placement="right"
+                        >stepUrl</a>&#63;&#58; string&#59;</code>
+                    <br />
+                    <code>
+                        <a
+                            mdbTooltip="N/A ATM"
+                            placement="right"
+                        >ignoreIncomplete</a>&#63;&#58; boolean&#59;</code>
+                    <br />
+                    <code>
+                        <a
+                            mdbTooltip="Basically if you want to have an icon display in the step box."
+                            placement="right"
+                        >icon</a>&#63;&#58; string&#59;</code>
+                    <br />
+                    <code>&#125;</code>
+                </p>
+            </div>
+        </div>
+        <div class="card mb-4">
+            <div class="card-body">
+                <h4 class="card-title">Ngx-dynamic-forms Component</h4>
+                <p class="card-text">
+                    This is a quick description of the Ngx-dynamic-forms component and a little bit
+                    about how it works.
+                </p>
+            </div>
+        </div>
+        <div class="card mb-4">
+            <div class="card-body">
+                <h4 class="card-title">Ngx-dynamic-form-input Component</h4>
+                <p class="card-text">
+                    This is a quick description of the Ngx-dynamic-form-input component and a little
+                    bit about how it works.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
