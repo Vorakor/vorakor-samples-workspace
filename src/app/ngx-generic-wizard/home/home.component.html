@@ -1,20 +1,21 @@
 <section class="text-center">
     <h2 class="h1 pb-2 font-weight-bold pink-text">Ngx Generic Wizard</h2>
     <p class="px-5 mb-5 pb-3 lead">
-        Text here...
-    </p>
-    <!-- <p class="px-5 mb-5 pb-3 lead">
-        Ngx Dynamic Forms currently features horizontal and vertical configured forms, as well as
-        submit and reset functionality, form controls can be passed in with custom validation as
-        well. There are two interfaces to make use of to accomplish configuration and to designate
-        fields and input structure, these are ngx-df-configuration and ngx-df-field-definition.
+        Ngx Generic Wizard is the power of a multi-step process in your hands, you define the steps, which pages they go
+        to and watch it do it's magic.
     </p>
     <p class="px-5 mb-5 pb-3 lead">
-        Ngx Dynamic Forms also has the ability to handle dynamic data, if you are unsure of how many
-        inputs or rows you will need, you won't even need to think about it anymore, and if someone
-        adds a new row without telling you, no worries there either, Ngx Dynamic Forms will adapt
-        and add in new rows dynamically as long as you've done your homework and set it up properly.
-    </p> -->
+        Ngx Generic Wizard currently features a horizontal UI stepper with lines between every step along with a
+        separate component container with the buttons to navigate through the wizard. Configuration is passed in before
+        hand and Ngx Generic Wizard has the unique capability that it can be integrated with stores and APIs. There are
+        several interfaces, the most important ones are ngx-gw-config and ngx-gw-step, as well as ngx-gw-step-status and
+        ngx-gw-step-status-map.
+    </p>
+    <p class="px-5 mb-5 pb-3 lead">
+        The ngx-gw-config has all of the options necessary for the wizard to function. The steps interface is
+        specifically meant to configure the individual steps with the status and status map interfaces meant to interact
+        with the system using Ngx Generic Wizard.
+    </p>
     <div class="row text-left">
         <div class="col-md-6 mb-3">
             <div class="col-1 col-md-2 float-left">
@@ -25,7 +26,8 @@
                 <p class="grey-text">
                     A couple of pages and steps for a basic wizard walk through.
                 </p>
-                <button mdbBtn color="danger" size="sm" class="ml-0 waves-light" [routerLink]="['basic']" mdbWavesEffect>
+                <button mdbBtn color="danger" size="sm" class="ml-0 waves-light" [routerLink]="['basic']"
+                    mdbWavesEffect>
                     Example
                 </button>
             </div>
@@ -37,9 +39,11 @@
             <div class="col-10 col-md-9 col-lg-10 float-right">
                 <h4 class="font-weight-bold">Advanced Wizard Example</h4>
                 <p class="grey-text">
-                    Coming soon... An example using tabs, different placements for buttons, multiple wizards, and state management.
+                    Coming soon... An example using tabs, different placements for buttons, multiple wizards, and state
+                    management.
                 </p>
-                <button mdbBtn color="cyan" size="sm" class="ml-0 waves-light" disabled mdbWavesEffect><!-- [routerLink]="['advanced']"  -->
+                <button mdbBtn color="cyan" size="sm" class="ml-0 waves-light" disabled mdbWavesEffect>
+                    <!-- [routerLink]="['advanced']"  -->
                     Example
                 </button>
             </div>
@@ -54,7 +58,8 @@
                     Come here to see some of the inner workings of Ngx Generic Wizard, and suggest
                     improvements.
                 </p>
-                <button mdbBtn color="orange" size="sm" class="ml-0 waves-light" [routerLink]="['inner-workings']" mdbWavesEffect>
+                <button mdbBtn color="orange" size="sm" class="ml-0 waves-light" [routerLink]="['inner-workings']"
+                    mdbWavesEffect>
                     Learn More
                 </button>
             </div>
@@ -70,7 +75,8 @@
                     into Ngx Generic Wizard, some features include a color scheming system and a
                     widget for dashboard views into how far along the user is in the wizard.
                 </p>
-                <button mdbBtn color="primary" size="sm" class="ml-0 waves-light" [routerLink]="['future']" mdbWavesEffect>
+                <button mdbBtn color="primary" size="sm" class="ml-0 waves-light" [routerLink]="['future']"
+                    mdbWavesEffect>
                     See More
                 </button>
             </div>

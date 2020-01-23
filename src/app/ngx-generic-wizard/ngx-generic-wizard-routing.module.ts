@@ -18,11 +18,8 @@ const routes: Routes = [
     },
     {
         path: 'basic',
+        component: BasicWizardExampleStartComponent,
         children: [
-            {
-                path: '',
-                component: BasicWizardExampleStartComponent,
-            },
             {
                 path: 'first',
                 component: BasicWizardExampleFirstComponent,
@@ -36,7 +33,7 @@ const routes: Routes = [
                 component: BasicWizardExampleThirdComponent,
             },
             {
-                path: 'final',
+                path: 'example-final',
                 component: BasicWizardExampleEndComponent,
             },
         ],

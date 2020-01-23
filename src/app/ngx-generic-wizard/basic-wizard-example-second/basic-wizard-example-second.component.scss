@@ -1,0 +1,12 @@
+::ng-deep .ngx-df-form {
+    line-height: 30px !important;
+    text-align: center;
+}
+
+::ng-deep .ngx-df-form .ngx-df-row {
+    height: 30px !important;
+}
+
+::ng-deep .ngx-df-form .ngx-df-row .ngx-df-col ::ng-deep .ngx-df-fake-form .ngx-df-form-control {
+    margin-left: 10px;
+}

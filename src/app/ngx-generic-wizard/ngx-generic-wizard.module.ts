@@ -1,6 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { NgxDynamicFormsModule } from 'ngx-dynamic-forms';
+import { NgxGenericWizardModule as NgxGWModule, NgxGenericWizardService } from 'ngx-generic-wizard';
 
 import { AdvancedWizardExampleComponent } from './advanced-wizard-example/advanced-wizard-example.component';
 import { BasicWizardExampleEndComponent } from './basic-wizard-example-end/basic-wizard-example-end.component';
@@ -25,6 +28,15 @@ import { NgxGenericWizardRoutingModule } from './ngx-generic-wizard-routing.modu
         InnerWorkingsComponent,
         FutureFeaturesComponent,
     ],
-    imports: [CommonModule, MDBBootstrapModule, NgxGenericWizardRoutingModule],
+    imports: [
+        CommonModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MDBBootstrapModule,
+        NgxGWModule,
+        NgxDynamicFormsModule,
+        NgxGenericWizardRoutingModule,
+    ],
+    providers: [NgxGenericWizardService],
 })
 export class NgxGenericWizardModule {}

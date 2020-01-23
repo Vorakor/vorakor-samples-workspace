@@ -2,7 +2,7 @@
     <h2 class="h1 pb-2 font-weight-bold pink-text">Ngx Generic Wizard - Inner Workings</h2>
     <p class="px-5 mb-5 pb-3 lead">
         Note: I'm not putting all of the models up here just yet, only the main ones a user will actually need to use
-        right away.
+        right away. Also note that the widget will not be shown presently as it is not ready for use.
     </p>
     <div class="card-deck">
         <div class="card mb-4">
@@ -112,7 +112,7 @@
                     <br />
                     <code>
                         <a
-                            mdbTooltip="The identifier for this row."
+                            mdbTooltip="The identifier for this step."
                             placement="right"
                         >stepId</a>&#63;&#58; number&#59;</code>
                     <br />
@@ -170,19 +170,111 @@
         </div>
         <div class="card mb-4">
             <div class="card-body">
-                <h4 class="card-title">Ngx-dynamic-forms Component</h4>
+                <h4 class="card-title">Ngx-gw-step-status Interface</h4>
                 <p class="card-text">
-                    This is a quick description of the Ngx-dynamic-forms component and a little bit
-                    about how it works.
+                    This interface maps out the status of the steps in the wizard and various
+                    states for that.
+                </p>
+                <p class="card-text text-left">
+                    <code>interface INgxGwStepStatus &#123;</code>
+                    <br />
+                    <code>
+                        <a
+                            mdbTooltip="The identifier of the step status for the wizard."
+                            placement="right"
+                        >statusId</a>&#63;&#58; number&#59;</code>
+                    <br />
+                    <code>
+                        <a
+                            mdbTooltip="The string identifier of the step status for the wizard."
+                            placement="right"
+                        >code</a>&#63;&#58; string&#59;</code>
+                    <br />
+                    <code>
+                        <a
+                            mdbTooltip="The long name of the step status for the wizard."
+                            placement="right"
+                        >description</a>&#63;&#58; string&#59;</code>
+                    <br />
+                    <code>&#125;</code>
                 </p>
             </div>
         </div>
         <div class="card mb-4">
             <div class="card-body">
-                <h4 class="card-title">Ngx-dynamic-form-input Component</h4>
+                <h4 class="card-title">Ngx-gw-step-status-map Interface</h4>
                 <p class="card-text">
-                    This is a quick description of the Ngx-dynamic-form-input component and a little
-                    bit about how it works.
+                    This interface can map whatever status one might have in their database to a
+                    status that Ngx Generic Wizard can understand.
+                </p>
+                <p class="card-text text-left">
+                    <code>interface INgxGwStepStatusMap &#123;</code>
+                    <br />
+                    <code>
+                        <a
+                            mdbTooltip="The starting status of any step."
+                            placement="right"
+                        >initial</a>&#63;&#58; number&#59;</code>
+                    <br />
+                    <code>
+                        <a
+                            mdbTooltip="When a step is currently being viewed or utilized."
+                            placement="right"
+                        >current</a>&#63;&#58; string&#59;</code>
+                    <br />
+                    <code>
+                        <a
+                            mdbTooltip="When a step has finished and comleted."
+                            placement="right"
+                        >complete</a>&#63;&#58; string&#59;</code>
+                    <br />
+                    <code>
+                        <a
+                            mdbTooltip="If a step had a problem or was not finished before navigation."
+                            placement="right"
+                        >incomplete</a>&#63;&#58; string&#59;</code>
+                    <br />
+                    <code>&#125;</code>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="card-deck">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h4 class="card-title">Ngx-generic-wizard-button-container Component</h4>
+                <p class="card-text">
+                    The button container contains the two buttons that will be used to advance the
+                    wizard when a step has been completed or if a user needs to return to a previous
+                    step.
+                </p>
+            </div>
+        </div>
+        <div class="card mb-4">
+            <div class="card-body">
+                <h4 class="card-title">Ngx-generic-wizard-step-container Component</h4>
+                <p class="card-text">
+                    The step container is what actually contains the UI for the steps, this component
+                    brings together the step component and the line component for a visually appealing
+                    experience.
+                </p>
+            </div>
+        </div>
+        <div class="card mb-4">
+            <div class="card-body">
+                <h4 class="card-title">Ngx-gw-action-btn Component</h4>
+                <p class="card-text">
+                    An abstract button that is used by the button container to provide the actions
+                    available in navigating through the wizard.
+                </p>
+            </div>
+        </div>
+        <div class="card mb-4">
+            <div class="card-body">
+                <h4 class="card-title">Ngx-gw-step Component</h4>
+                <p class="card-text">
+                    The step is the visual element on the page with a title and step count, one can
+                    click on it to provide navigation that way if the configuration is enabled for that.
                 </p>
             </div>
         </div>
