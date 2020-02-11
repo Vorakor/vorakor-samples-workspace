@@ -1,2 +1,88 @@
-<h1 class="orange-text text-center">Ngx Health Checker</h1>
-<p>Coming soon!</p>
+<section class="text-center">
+    <h2 class="h1 pb-2 font-weight-bold orange-text">Ngx Health Checker</h2>
+    <p class="px-5 mb-5 pb-3 lead">
+        Ngx Health Checker is your IT managers dream, it informs you and your application when things go awry and
+        puts up a neat window informing your users that we're going to keep trying until everything goes right again.
+    </p>
+    <p class="px-5 mb-5 pb-3 lead">
+        Ngx Health Checker features an optional component with pre-built modals, but the real gem of Ngx Health
+        Checker is the service. This beast of a service has a number of built in features that can be configured to
+        suit your applications and your needs, including servers and endpoints configuration so that Ngx Health Checker
+        can ping your server for you and tell you when it can't reach it, it also features a debug setting that will
+        log to the console to show you what the Ngx Health Checker is up to.
+    </p>
+    <p class="px-5 mb-5 pb-3 lead">
+        In addition to this, Ngx Health Checker comes configured to handle your needs with http errors, including an
+        observable to track errors that come back from your server and will in the future inclue a piece that can be
+        put in as a global error handler so you can track those pesky application problems. Additionally, Ngx Health
+        Checker comes built with a web socket so that your server can communicate with you and let you know what is
+        going on in the black box.
+    </p>
+    <div class="row text-left">
+        <div class="col-md-6 mb-3">
+            <div class="col-1 col-md-2 float-left">
+                <mdb-icon fas icon="heartbeat" size="3x" class="red-text"></mdb-icon>
+            </div>
+            <div class="col-10 col-md-9 col-lg-10 float-right">
+                <h4 class="font-weight-bold">Heartbeat Example</h4>
+                <p class="grey-text">
+                    A page with some configuration and some buttons to show off the base functionality of Ngx Health
+                    Checker
+                </p>
+                <button mdbBtn color="danger" size="sm" class="ml-0 waves-light" [routerLink]="['heartbeat']"
+                    mdbWavesEffect>
+                    Example
+                </button>
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <div class="col-1 col-md-2 float-left">
+                <mdb-icon fas icon="server" size="3x" class="cyan-text"></mdb-icon>
+            </div>
+            <div class="col-10 col-md-9 col-lg-10 float-right">
+                <h4 class="font-weight-bold">Web Socket Example</h4>
+                <p class="grey-text">
+                    A page with some buttons to show off the web socket functionality of the Ngx Health Checker
+                </p>
+                <button mdbBtn color="cyan" size="sm" class="ml-0 waves-light" [routerLink]="['websocket']"
+                    mdbWavesEffect>
+                    Example
+                </button>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="col-1 col-md-2 float-left">
+                <mdb-icon fas icon="cogs" size="3x" class="orange-text"></mdb-icon>
+            </div>
+            <div class="col-10 col-md-9 col-lg-10 float-right">
+                <h4 class="font-weight-bold">Inner Workings</h4>
+                <p class="grey-text">
+                    Come here to see some of the inner workings of Ngx Health Checker, and suggest
+                    improvements.
+                </p>
+                <button mdbBtn color="orange" size="sm" class="ml-0 waves-light" [routerLink]="['inner-workings']"
+                    mdbWavesEffect>
+                    Learn More
+                </button>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="col-1 col-md-2 float-left">
+                <mdb-icon fas icon="road" size="3x" class="blue-text"></mdb-icon>
+            </div>
+            <div class="col-10 col-md-9 col-lg-10 float-right">
+                <h4 class="font-weight-bold">Future Features</h4>
+                <p class="grey-text">
+                    Here we have a road map of future features that are intended to be implemented
+                    into Ngx Health Checker, some features include a global error handler and some
+                    additional components to give more visibility into errors and how often you are
+                    getting errors in your system.
+                </p>
+                <button mdbBtn color="primary" size="sm" class="ml-0 waves-light" [routerLink]="['future']"
+                    mdbWavesEffect>
+                    See More
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
